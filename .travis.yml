@@ -1,9 +1,9 @@
 language: node_js
-2 node_js:
-3   - "6"
-4 script:
-5   - echo 'Hello Firebase'
-6 install:
-7   - npm install -g firebase-tools
-8 after_success:
-9   - firebase deploy --email ${USERNAME} --password ${PASSWORD}
+node_js:
+  - "6"
+script:
+  - echo 'Hello Firebase'
+install:
+  - npm install -g firebase-tools
+after_success:
+  - firebase deploy --email ${USERNAME} --password ${PASSWORD}
