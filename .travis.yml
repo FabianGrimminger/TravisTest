@@ -4,8 +4,8 @@ node_js:
 before_script:
   - ls
   - npm install -g firebase-tools
+  - cd public/travistestapp
   - npm install -g @angular/cli
-  - ls
 script:
   - ng build --prod
 after_success:
