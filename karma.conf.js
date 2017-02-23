@@ -40,6 +40,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chromium'],
-    singleRun: false,
+    singleRun: true
   });
 };
