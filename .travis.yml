@@ -16,7 +16,7 @@ before_script:
   - npm install -g firebase-tools
   - npm install -g @angular/cli
 script:
-  - npm test --single-run
+  - ng test --single-run
   - ng lint
   - ng e2e
   - ng build --prod
