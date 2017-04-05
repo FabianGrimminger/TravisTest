@@ -11,14 +11,21 @@ before_install:
  - sudo apt-get install -y libappindicator1 fonts-liberation
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
+ - sudo apt-get install ruby -y
 before_script:
   - ls
   - npm install -g firebase-tools
   - npm install -g @angular/cli
+  - gem install bundler
+  - gem install selenium-webdriver -v 3.2.1
+  - gem install selenium-cucumber
+  - gem install rspec
+  - gem list
 script:
   - ng test --single-run
   - ng lint
   - ng e2e
+  - cucumber
   - ng build --prod
 after_success:
   - firebase deploy --token=${FIREBASE_TOKEN}
