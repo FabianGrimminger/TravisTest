@@ -12,6 +12,10 @@ before_install:
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
  - sudo apt-get install ruby -y
+ - wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
+ - mkdir geckodriver
+ - tar -xzf geckodriver-v0.11.1-linux64.tar.gz -C geckodriver
+ - export PATH=$PATH:$PWD/geckodriver
 before_script:
   - ls
   - npm install -g firebase-tools
@@ -22,10 +26,10 @@ before_script:
   - gem install rspec
   - gem list
 script: 
+  - ng e2e
   - ng serve > /dev/null &
   - ng test --single-run
   - ng lint
-  - ng e2e
   - cucumber
   - ng build --prod
 after_success:
