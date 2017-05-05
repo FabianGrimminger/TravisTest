@@ -46,6 +46,6 @@ else # else create driver instance for desktop browser
     $driver.manage().window().maximize()
   rescue Exception => e
     puts e.message
-    Process.exit(0)
+    Process.exit(1)
   end
 end
