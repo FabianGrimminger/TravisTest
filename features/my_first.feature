@@ -6,4 +6,4 @@ Feature: Test this
  
   Scenario: Cutting vegetables
     Given I navigate to "http:\\localhost:4200"
-    Then element having id "headline" should have partial text as "app works"
+    Then element having id "headline" should have partial text as "app fabi works"
