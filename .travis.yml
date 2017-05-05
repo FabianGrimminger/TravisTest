@@ -21,7 +21,8 @@ before_script:
   - gem install selenium-cucumber
   - gem install rspec
   - gem list
-script:
+script: 
+  - ng serve > /dev/null &
   - ng test --single-run
   - ng lint
   - ng e2e
