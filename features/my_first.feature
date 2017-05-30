@@ -7,3 +7,7 @@ Feature: Test this
   Scenario: Cutting vegetables
     Given I navigate to "http:\\localhost:4200"
     Then element having id "headline" should have partial text as "app fabi works"
+    
+  Scenario: Cutting meat
+    Given I navigate to "https:\\www.google.de"
+    Then element having id "headline" should have partial text as "app fabi works"
