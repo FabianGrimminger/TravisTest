@@ -34,5 +34,5 @@ script:
 #  - ng build --prod
 #after_success:
 #  - firebase deploy --token=${FIREBASE_TOKEN}
-addon:
+addons:
  - firefox: "latest"
