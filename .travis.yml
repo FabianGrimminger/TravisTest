@@ -35,4 +35,4 @@ script:
 #after_success:
 #  - firebase deploy --token=${FIREBASE_TOKEN}
 addon:
- - firefox: "49.0"
+ - firefox: "latest"
